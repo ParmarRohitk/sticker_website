@@ -26,10 +26,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
       >
         <Sidebar />
-        {children}
+        <main className="flex-1 p-6">
+          {children}
+          {/* Footer */}
+          <footer className="sticky bottom-0 mt-12 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Sticker Shop. All rights reserved.</p>
+          </footer>
+        </main>
       </body>
     </html>
   );
